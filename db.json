@@ -1,0 +1,11 @@
+{
+  "customers": [
+    {
+      "id": 2,
+      "name": "amita kale",
+      "mobno": 24565,
+      "address": "gadachiwadi",
+      "date": "2021-09-09"
+    }
+  ]
+}

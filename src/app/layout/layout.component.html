@@ -1,0 +1,24 @@
+<div class="nav bg-light p-2 justify-content-center">
+  Store Management System
+  <!-- <button type="button" class="btn btn-danger" [routerLink]="['']">Logout</button> -->
+</div>
+<div class="row">
+  <div class="col-1 bg-light">
+    <div class="row">
+      <div class=" col-12 border py-3" [routerLink]="['home']">Home</div>
+
+      <div class=" col-12 border py-3">About us</div>
+
+      <div class=" col-12 border py-3" [routerLink]="['customer/table']">Customer</div>
+
+
+      <div class=" col-12 border py-3" [routerLink]="['supplier']">Supplier</div>
+
+      <div class=" col-12 border py-3" [routerLink]="['user']">User</div>
+    </div>
+  </div>
+  <div class="col-11">
+
+    <router-outlet></router-outlet>
+  </div>
+</div>
