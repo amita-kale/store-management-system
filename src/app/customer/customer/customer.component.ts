@@ -25,7 +25,8 @@ export class CustomerComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.routeParam.snapshot.params.ui); //ui is temporily we have to take this from routing file
+    console.log(this.routeParam.snapshot.params.ui);
+    //ui is temporily we have to take this from routing file
     if (this.routeParam.snapshot.params.ui) {
       this.customerservice
         .getSpecificData(this.routeParam.snapshot.params.ui)
@@ -36,7 +37,11 @@ export class CustomerComponent implements OnInit {
         });
     }
   }
-  submitClicked() {
+
+  /**
+   * this function will get called of on click of add customer
+   */
+  submitClicked(): void {
     const customer = {
       id: this.customer.id,
       name: this.customer.name,
@@ -56,4 +61,14 @@ export class CustomerComponent implements OnInit {
       });
     }
   }
+
+  // /**
+  //  * this is used to add two numbers
+  //  * @param a First number
+  //  * @param b
+  //  * @returns adding of a & b varibles.
+  //  */
+  // add(a: number, b: number): number {
+  //   return a + b;
+  // }
 }
