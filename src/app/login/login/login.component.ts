@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
     username: '',
     password: '',
   };
+  dynamicpassword = true;
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
@@ -19,7 +20,9 @@ export class LoginComponent implements OnInit {
       this.loginuser.username == 'amita' &&
       this.loginuser.password == 'Smiler@123'
     ) {
-      this.router.navigate(['home/home']);
+      this.router.navigate(['/home']);
+    } else {
+      alert('Username & password is wrong');
     }
   }
 }

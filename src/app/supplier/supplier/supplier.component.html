@@ -1,1 +1,45 @@
-<p>supplier works!</p>
+<div class="card mt-2">
+
+  <div class="card-body border col-12 p-8">
+    <form>
+      <div class="mb-3">
+        <label for="id" class="form-label">CustomerId</label>
+        <input type="number" class="form-control" id="id" aria-describedby="emailHelp" [(ngModel)]="supplier.id"
+          name="id" />
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">CustomerName</label>
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" [(ngModel)]="supplier.name"
+          name="name" />
+      </div>
+
+      <div class="mb-3">
+        <label for="mobno" class="form-label">Mob No:</label>
+        <input type="number" class="form-control" id="mobno" aria-describedby="emailHelp" [(ngModel)]="supplier.mobno"
+          name="mobno">
+      </div>
+
+      <div class="mb-3">
+        <label for="address" class="form-label">Address:</label>
+        <textarea type="number" class="form-control" id="address" aria-describedby="emailHelp"
+          [(ngModel)]="supplier.address" name="add"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="date" class="form-label">Date:</label>
+        <input type="date" class="form-control" id="date" aria-describedby="emailHelp" [(ngModel)]="supplier.date"
+          name="date">
+      </div>
+
+      <button type="button" class="btn btn-primary" (click)="submitClicked()">
+        {{ isEdit === "true" ? "update" : "submit" }}
+      </button>
+      &nbsp;
+      <button type="reset" class="btn btn-primary">Reset</button> &nbsp;
+      <button type="button" class="btn btn-secondary ml-2" [routerLink]="['suppliertable']">
+        Back
+      </button>
+    </form>
+  </div>
+</div>
