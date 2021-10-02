@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CustomerService {
-  customers = [];
+  // customers = [];
   constructor(private httpClient: HttpClient) {}
   getData() {
     return this.httpClient.get('http://localhost:3000/customers');

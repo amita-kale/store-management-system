@@ -3,13 +3,13 @@
   <div class="card-body border col-12 p-8">
     <form>
       <div class="mb-3">
-        <label for="id" class="form-label">CustomerId</label>
+        <label for="id" class="form-label">SupplierId</label>
         <input type="number" class="form-control" id="id" aria-describedby="emailHelp" [(ngModel)]="supplier.id"
           name="id" />
       </div>
 
       <div class="mb-3">
-        <label for="name" class="form-label">CustomerName</label>
+        <label for="name" class="form-label">SupplierName</label>
         <input type="text" class="form-control" id="name" aria-describedby="emailHelp" [(ngModel)]="supplier.name"
           name="name" />
       </div>
@@ -32,8 +32,8 @@
           name="date">
       </div>
 
-      <button type="button" class="btn btn-primary" (click)="submitClicked()">
-        {{ isEdit === "true" ? "update" : "submit" }}
+      <button type="button" class="btn btn-primary" (click)="onClickOfFormData()">
+        {{ isEdit === "true" ? "Update" : "Submit" }}
       </button>
       &nbsp;
       <button type="reset" class="btn btn-primary">Reset</button> &nbsp;
