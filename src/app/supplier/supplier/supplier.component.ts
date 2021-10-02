@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SupplierService } from '../supplier.service';
 
 @Component({
   selector: 'app-supplier',
@@ -14,8 +16,16 @@ export class SupplierComponent implements OnInit {
     address: '',
     date: null,
   };
-  constructor() {}
+  constructor(
+    private supplierService: SupplierService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
-  submitClicked() {}
+  onClickOfFormData() {
+    console.log(this.supplier);
+
+    this.supplierService.addData(this.supplier);
+    this.router.navigate(['supplier/suppliertable']);
+  }
 }

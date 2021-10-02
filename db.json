@@ -6,6 +6,16 @@
       "mobno": 24565,
       "address": "gadachiwadi",
       "date": "2021-09-09"
+    },
+    {
+      "id": 1,
+      "name": "Amita Ravindra Kale",
+      "mobno": 1234567867,
+      "address": "zxcvbnm",
+      "date": "2021-10-01"
     }
+  ],
+  "suppliers": [
+    {}
   ]
 }
