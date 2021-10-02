@@ -1,21 +1,20 @@
 {
-  "customers": [
-    {
-      "id": 2,
-      "name": "amita kale",
-      "mobno": 24565,
-      "address": "gadachiwadi",
-      "date": "2021-09-09"
-    },
+  "customers": [],
+  "suppliers": [
+    {},
     {
       "id": 1,
-      "name": "Amita Ravindra Kale",
-      "mobno": 1234567867,
-      "address": "zxcvbnm",
-      "date": "2021-10-01"
+      "name": "Amita",
+      "mobno": 4567890,
+      "address": "fghjkl;'",
+      "date": "2021-10-20"
+    },
+    {
+      "id": 2,
+      "name": "gh",
+      "mobno": 67890,
+      "address": "fghjk",
+      "date": null
     }
-  ],
-  "suppliers": [
-    {}
   ]
 }

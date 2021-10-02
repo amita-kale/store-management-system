@@ -1,1 +1,29 @@
-<p>suppliertable works!</p>
+<button class="btn btn-primary mt-3 float-end" [routerLink]="['/customer/form']">Back to create data</button>
+
+<table class="table">
+  <thead class="table-dark">
+    Supplier Table
+  </thead>
+  <tbody>
+    <tr class="table-dark">
+
+      <th>Id</th>
+      <th>Name</th>
+      <th>Mobno</th>
+      <th>Address</th>
+      <th>date</th>
+      <th colspan="2">Action</th>
+
+    </tr>
+    <tr *ngFor="let item of supplier,let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.mobno}}</td>
+      <td>{{item.address}}</td>
+      <td>{{item.date}}</td>
+      <td><button type="button" class="btn btn-success" (click)="editClicked(item.id)">Edit</button>&nbsp;
+        <button type="button" class="btn btn-success" (click)="deleteListData(item)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

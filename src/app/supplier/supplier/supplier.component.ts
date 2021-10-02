@@ -24,8 +24,15 @@ export class SupplierComponent implements OnInit {
   ngOnInit(): void {}
   onClickOfFormData() {
     console.log(this.supplier);
+    const supplier = {
+      id: this.supplier.id,
+      name: this.supplier.name,
+      mobno: this.supplier.mobno,
+      address: this.supplier.address,
+      date: this.supplier.date,
+    };
 
-    this.supplierService.addData(this.supplier);
+    this.supplierService.addData(this.supplier).subscribe(() => {});
     this.router.navigate(['supplier/suppliertable']);
   }
 }
