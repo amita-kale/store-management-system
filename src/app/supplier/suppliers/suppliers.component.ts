@@ -5,10 +5,10 @@ import { SupplierService } from '../supplier.service';
 
 @Component({
   selector: 'app-suppliertable',
-  templateUrl: './suppliertable.component.html',
-  styleUrls: ['./suppliertable.component.css'],
+  templateUrl: './suppliers.component.html',
+  styleUrls: ['./suppliers.component.css'],
 })
-export class SuppliertableComponent implements OnInit {
+export class SuppliersComponent implements OnInit {
   supplier = [];
   constructor(
     private supplierService: SupplierService,

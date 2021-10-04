@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CustomerComponent } from './customer/customer.component';
-import { CustomertableComponent } from './customertable/customertable.component';
-
+import { CustomersComponent } from './customers/customers.component';
 const routes: Routes = [
   {
     path: 'form',
@@ -10,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'table',
-    component: CustomertableComponent,
+    component: CustomersComponent,
   },
   {
     path: 'form/:ui',

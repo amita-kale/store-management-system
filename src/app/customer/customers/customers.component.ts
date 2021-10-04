@@ -4,10 +4,10 @@ import { CustomerService } from '../customer.service';
 
 @Component({
   selector: 'app-customertable',
-  templateUrl: './customertable.component.html',
-  styleUrls: ['./customertable.component.css'],
+  templateUrl: './customers.component.html',
+  styleUrls: ['./customers.component.css'],
 })
-export class CustomertableComponent implements OnInit {
+export class CustomersComponent implements OnInit {
   customers: any = [];
   constructor(
     private customerservice: CustomerService,

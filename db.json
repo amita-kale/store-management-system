@@ -1,12 +1,4 @@
 {
-  "customers": [
-    {
-      "id": 1,
-      "name": "Amita Kale",
-      "mobno": 23456,
-      "address": "sdfgh",
-      "date": "2021-11-07"
-    }
-  ],
+  "customers": [],
   "suppliers": []
 }

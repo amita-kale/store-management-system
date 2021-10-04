@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { SupplierRoutingModule } from './supplier-routing.module';
 import { SupplierComponent } from './supplier/supplier.component';
-import { SuppliertableComponent } from './suppliertable/suppliertable.component';
+import { SuppliersComponent } from './suppliers/suppliers.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [SupplierComponent, SuppliertableComponent],
+  declarations: [SupplierComponent, SuppliersComponent],
   imports: [CommonModule, SupplierRoutingModule, FormsModule],
 })
 export class SupplierModule {}
