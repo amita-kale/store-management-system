@@ -1,20 +1,12 @@
 {
-  "customers": [],
-  "suppliers": [
-    {},
+  "customers": [
     {
       "id": 1,
-      "name": "Amita",
-      "mobno": 4567890,
-      "address": "fghjkl;'",
-      "date": "2021-10-20"
-    },
-    {
-      "id": 2,
-      "name": "gh",
-      "mobno": 67890,
-      "address": "fghjk",
-      "date": null
+      "name": "Amita Kale",
+      "mobno": 23456,
+      "address": "sdfgh",
+      "date": "2021-11-07"
     }
-  ]
+  ],
+  "suppliers": []
 }

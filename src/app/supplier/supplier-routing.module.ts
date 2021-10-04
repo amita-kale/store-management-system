@@ -5,12 +5,16 @@ import { SuppliertableComponent } from './suppliertable/suppliertable.component'
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'form',
     component: SupplierComponent,
   },
   {
     path: 'suppliertable',
     component: SuppliertableComponent,
+  },
+  {
+    path: 'form/:ui',
+    component: SupplierComponent,
   },
 ];
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SupplierService } from '../supplier.service';
 
 @Component({
@@ -8,7 +8,8 @@ import { SupplierService } from '../supplier.service';
   styleUrls: ['./supplier.component.css'],
 })
 export class SupplierComponent implements OnInit {
-  isEdit = 'false';
+  isEdit = false;
+  index = -1;
   supplier = {
     id: null,
     name: '',
@@ -18,10 +19,23 @@ export class SupplierComponent implements OnInit {
   };
   constructor(
     private supplierService: SupplierService,
-    private router: Router
+    private router: Router,
+    private routeParam: ActivatedRoute
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    console.log(this.routeParam.snapshot.params.ui);
+    //ui is temporily we have to take this from routing file
+    if (this.routeParam.snapshot.params.ui) {
+      this.supplierService
+        .getSpecificData(this.routeParam.snapshot.params.ui)
+        .subscribe((data: any) => {
+          this.supplier = data;
+          this.isEdit = true;
+          this.index = this.routeParam.snapshot.params.ui;
+        });
+    }
+  }
   onClickOfFormData() {
     console.log(this.supplier);
     const supplier = {
@@ -32,7 +46,16 @@ export class SupplierComponent implements OnInit {
       date: this.supplier.date,
     };
 
-    this.supplierService.addData(this.supplier).subscribe(() => {});
-    this.router.navigate(['supplier/suppliertable']);
+    if (this.isEdit === true) {
+      this.supplierService
+        .updateSupplier(this.index, supplier)
+        .subscribe(() => {
+          this.router.navigate(['supplier/suppliertable']);
+        });
+    } else {
+      this.supplierService.addData(supplier).subscribe(() => {
+        this.router.navigate(['supplier/suppliertable']);
+      });
+    }
   }
 }

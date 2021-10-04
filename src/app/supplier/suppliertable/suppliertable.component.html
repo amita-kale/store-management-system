@@ -21,8 +21,8 @@
       <td>{{item.mobno}}</td>
       <td>{{item.address}}</td>
       <td>{{item.date}}</td>
-      <td><button type="button" class="btn btn-success" (click)="editClicked(item.id)">Edit</button>&nbsp;
-        <button type="button" class="btn btn-success" (click)="deleteListData(item)">Delete</button>
+      <td><button type="button" class="btn btn-success" (click)="editListData(item.id)">Edit</button>&nbsp;
+        <button type="button" class="btn btn-success" (click)="deleteListData(item.id)">Delete</button>
       </td>
     </tr>
   </tbody>

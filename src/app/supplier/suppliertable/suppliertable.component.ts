@@ -1,5 +1,6 @@
 import { getLocaleDateFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SupplierService } from '../supplier.service';
 
 @Component({
@@ -9,7 +10,10 @@ import { SupplierService } from '../supplier.service';
 })
 export class SuppliertableComponent implements OnInit {
   supplier = [];
-  constructor(private supplierService: SupplierService) {}
+  constructor(
+    private supplierService: SupplierService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getData();
@@ -20,9 +24,14 @@ export class SuppliertableComponent implements OnInit {
     });
   }
   deleteListData(item) {
+    //item its a id .we can take any variable name
     console.log(item);
-    this.supplierService.deleteData(item.id).subscribe(() => {
+    this.supplierService.deleteData(item).subscribe(() => {
       this.getData();
     });
+  }
+  editListData(itemId) {
+    //itemId its a id .we can take any variable name
+    this.router.navigate(['supplier/form/' + itemId]);
   }
 }
