@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CustomerService {
-  // customers = [];
   constructor(private httpClient: HttpClient) {}
   getData() {
     return this.httpClient.get('http://localhost:3000/customers');
@@ -21,6 +20,7 @@ export class CustomerService {
   }
 
   deleteData(id) {
+    //we need after url complete / because for delete method id is required
     return this.httpClient.delete('http://localhost:3000/customers/' + id);
   }
   updateCustomer(id, item) {
