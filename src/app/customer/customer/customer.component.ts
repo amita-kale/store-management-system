@@ -41,7 +41,7 @@ export class CustomerComponent implements OnInit {
   /**
    * this function will get called of on click of add customer
    */
-  submitClicked(): void {
+  clickOfAddCustomer(): void {
     const customer = {
       id: this.customer.id,
       name: this.customer.name,

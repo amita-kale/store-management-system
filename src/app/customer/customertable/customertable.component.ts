@@ -23,16 +23,16 @@ export class CustomertableComponent implements OnInit {
     });
   }
 
-  deleteClicked(item) {
+  deleteDataOfCustomer(item) {
     console.log(item.id);
     console.log('hello');
 
     this.customerservice.deleteData(item.id).subscribe(() => {
-      this.getData();
+      this.getData(); //again getData() method is called because we need access refreshing table
     });
   }
 
-  editClicked(itemId) {
+  editDataOfCustomer(itemId) {
     // const url = 'customer/form/' + item.id;
     // console.log(url);
     console.log(itemId);
